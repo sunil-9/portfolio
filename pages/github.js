@@ -6,7 +6,7 @@ import GithubSection from "../section/GithubSection";
 import styles from "../styles/Home.module.css";
 
 const Github = ({ repos }) => {
-  console.log({ repos });
+//   console.log({ repos });
 
   return (
     <div className={styles.container}>

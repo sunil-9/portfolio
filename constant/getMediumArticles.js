@@ -16,7 +16,7 @@ const shortenDescription = (description) => {
 
 const getMediumArticles = async ({ username }) => {
     try {
-        console.log({ username })
+        // console.log({ username })
         const { data } = await axios.get(
             `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${username}`
         )

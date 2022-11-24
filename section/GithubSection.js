@@ -14,7 +14,7 @@ import Paragraph from "../components/Paragraph";
 const GithubSection = ({ repos }) => {
   const [openTab, setOpenTab] = React.useState(1);
   const languages = [...new Set(repos.map((repo) => repo.language))].sort();
-  console.log(languages);
+//   console.log(languages);
   //find the repos with language and get output as an array of repos with language
   let repoarray = [];
   languages.forEach((language) => {
@@ -23,7 +23,7 @@ const GithubSection = ({ repos }) => {
     );
     repoarray = { ...repoarray, [language]: reposWithLanguage };
   });
-  console.log(repoarray, "repoarray");
+//   console.log(repoarray, "repoarray");
 
   return (
     <SlideFade in offsetY={80} delay={0.2}>

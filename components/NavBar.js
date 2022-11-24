@@ -7,7 +7,7 @@ import {
   Flex,
   HStack,
   IconButton,
-  Link as CharkaLink,
+  Link ,
   Stack,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -27,7 +27,7 @@ const NavBar = () => {
     <>
       {menuLinks.map((link) => (
         <NextLink href={link.route} key={link.name} passHref>
-          <CharkaLink
+          <Link
             href={link.route}
             px={2}
             py={1}
@@ -42,7 +42,7 @@ const NavBar = () => {
             onClick={isOpen ? onClose : onOpen}
           >
             {link.name}
-          </CharkaLink>
+          </Link>
         </NextLink>
       ))}
     </>
@@ -67,13 +67,15 @@ const NavBar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
+            <NextLink href="/" passHref>
             <Avatar
-              as={CharkaLink}
+              as={Link}
               size="sm"
               href="/"
               src="/profile_picture.png"
-              _hover={{ borderColor: "blue.500" }}
             />
+
+             </NextLink>
             <HStack as="nav" spacing="4" display={{ base: "none", md: "flex" }}>
               {navItem}
             </HStack>
