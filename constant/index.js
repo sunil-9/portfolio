@@ -24,31 +24,31 @@ const siteConfig = {
     name: "Sunil Sapkota",
     accounts: [
       {
-        url: "https://github.com/WenLonG12345",
+        url: "https://github.com/sunil-9",
         icon: <FaGithub />,
         name: "Github",
         type: "gray",
       },
       {
-        url: "https://www.linkedin.com/in/teo-wen-long-19960316/",
+        url: "https://www.linkedin.com/in/sunilsapkota09/",
         icon: <FaLinkedin />,
         name: "Linkedin",
         type: "linkedin",
       },
       {
-        url: "https://stackoverflow.com/users/12261890/teo",
+        url: "https://stackoverflow.com/users/8008979/sunil-sapkota",
         icon: <FaStackOverflow />,
         name: "StackOverflow",
         type: "orange",
       },
       {
-        url: "https://skynight1996.medium.com/",
+        url: "https://sunil-9.medium.com/",
         icon: <FaMedium />,
         name: "Medium",
         type: "gray",
       },
       {
-        url: "mailto:teowenlong0316@gmail.com",
+        url: "mailto:sunilsapkota9@gmail.com",
         icon: <SiGmail />,
         name: "Gmail",
         type: "red",
