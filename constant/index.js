@@ -1,13 +1,161 @@
 import { CgAlbum } from "react-icons/cg";
 import {
   FaAndroid,
+  FaGitAlt,
   FaGithub,
+  FaJava,
+  FaJs,
   FaLinkedin,
   FaMedium,
+  FaPhp,
   FaReact,
   FaStackOverflow,
 } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
+import {
+  SiDart,
+  SiDocker,
+  SiFastlane,
+  SiFirebase,
+  SiGmail,
+  SiGrafana,
+  SiJenkins,
+  SiKotlin,
+  SiKubernetes,
+  SiLaravel,
+  SiLinux,
+  SiNextdotjs,
+  SiPrometheus,
+  SiTerraform,
+  SiTypescript,
+} from "react-icons/si";
+
+const techStacks = [
+  {
+    name: "Android",
+    category: "Moblile Development",
+    icon: <FaAndroid fontSize="20px" className="text-green-500" />,
+    url: "https://www.android.com/",
+  },
+  {
+    name: "React Native",
+    category: "Moblile Development",
+    icon: <FaReact fontSize="20px" className="text-blue-500" />,
+    url: "https://reactnative.dev/",
+  },
+  {
+    name: "Kotlin",
+    category: "Moblile Development",
+    icon: <SiKotlin fontSize="20px" className="text-purple-500" />,
+    url: "https://kotlinlang.org/",
+  },
+  {
+    name: "Java",
+    category: "Language",
+    icon: <FaJava fontSize="20px" />,
+    url: "https://www.java.com/en/",
+  },
+  {
+    name: "Dart",
+    category: "Language",
+    icon: <SiDart fontSize="20px" className="text-blue-500" />,
+    url: "https://dart.dev/",
+  },
+  {
+    name: "Javascript",
+    category: "Language",
+    icon: <FaJs fontSize="20px" className="text-yellow-400" />,
+    url: "https://www.javascript.com/",
+  },
+  {
+    name: "Typescript",
+    category: "Language",
+    icon: <SiTypescript fontSize="20px" className="text-blue-500" />,
+    url: "https://www.typescriptlang.org/",
+  },
+  {
+    name: "Terraform",
+    category: "Language",
+    icon: <SiTerraform fontSize="20px" className="text-purple-500" />,
+    url: "https://www.terraform.io/",
+  },
+  {
+    name: "PHP",
+    category: "Language",
+    icon: <FaPhp fontSize="20px" className="text-blue-300" />,
+    url: "https://www.php.net/",
+  },
+  {
+    name: "Firebase",
+    category: "Web Development",
+    icon: <SiFirebase fontSize="20px" className="text-yellow-400" />,
+    url: "https://firebase.google.com/",
+  },
+  {
+    name: "Laravel",
+    category: "Web Development",
+    icon: <SiLaravel fontSize="20px" className="text-red-600" />,
+    url: "https://laravel.com/",
+  },
+  {
+    name: "Next.js",
+    category: "Web Development",
+    icon: <SiNextdotjs fontSize="20px" />,
+    url: "https://nextjs.org/",
+  },
+  {
+    name: "Github Actions",
+    category: "DevOps",
+    icon: <FaGitAlt fontSize="20px" />,
+    url: "https://www.github.com/",
+  },
+  {
+    name: "Linux",
+    category: "DevOps",
+    icon: <SiLinux fontSize="20px" />,
+    url: "https://www.linux.com/",
+  },
+  {
+    // icon: <FaGitAlt fontSize="20px" />,
+    name: "Jenkins",
+    category: "DevOps",
+    icon: <SiJenkins fontSize="20px" />,
+    url: "https://www.jenkins.io/",
+  },
+  {
+    name: "Docker & Kubernetes",
+    category: "DevOps",
+    icon: (
+      <>
+        <SiDocker fontSize="20px" className="text-blue-400" />
+        <SiKubernetes fontSize="20px" className="text-blue-600" />
+      </>
+    ),
+    url: "https://www.docker.com/",
+  },
+  {
+    name: "Premetheus & Grafana",
+    category: "DevOps",
+    icon: (
+      <>
+        <SiPrometheus fontSize="20px" className="text-orange-500" />
+        <SiGrafana fontSize="20px" className="text-orange-600"/>
+      </>
+    ),
+    url: "https://prometheus.io/",
+  },
+  {
+    // icon: <FaGitAlt fontSize="20px" />,
+    name: "CI/CD - Fastlane & Terraform",
+    category: "DevOps",
+    icon: (
+      <>
+        <SiFastlane fontSize="20px" />
+        <SiTerraform fontSize="20px" className="text-purple-500" />
+      </>
+    ),
+    url: "https://fastlane.tools/",
+  },
+];
 
 const menuLinks = [
   { name: "About Me", route: "/about" },
@@ -187,45 +335,6 @@ const liveProjects = [
     playstore:
       "https://play.google.com/store/apps/details?id=io.chativo.visitor",
     appstore: "https://apps.apple.com/us/app/chativov/id1595519177",
-  },
-];
-
-const techStacks = [
-  {
-    name: "Android",
-    icon: <FaAndroid fontSize="20px" />,
-    category: "devops",
-    url: "https://www.android.com/",
-  },
-  {
-    name: "React Native",
-    icon: <FaReact fontSize="20px" />,
-    category: "devops",
-    url: "https://reactnative.dev/",
-  },
-  {
-    name: "Android",
-    icon: <FaAndroid fontSize="20px" />,
-    category: "android",
-    url: "https://www.android.com/",
-  },
-  {
-    name: "React Native",
-    icon: <FaReact fontSize="20px" />,
-    category: "android",
-    url: "https://reactnative.dev/",
-  },
-  {
-    name: "Android",
-    icon: <FaAndroid fontSize="20px" />,
-    category: "web",
-    url: "https://www.android.com/",
-  },
-  {
-    name: "React Native",
-    icon: <FaReact fontSize="20px" />,
-    category: "web",
-    url: "https://reactnative.dev/",
   },
 ];
 
