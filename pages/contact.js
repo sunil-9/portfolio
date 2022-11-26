@@ -21,7 +21,7 @@ import ErrorMessage from "../components/ErrorMessage";
 import styles from "../styles/Home.module.css";
 
 const Contact = () => {
-  init("user_CraRkhplYuq6PLLiXeFjw");
+  init("zBW5zOxwyzw6GEBkD");
 
   const toast = useToast();
 
@@ -44,7 +44,7 @@ const Contact = () => {
     setIsLoading(true);
 
     emailjs
-      .send("service_ef4l2nb", "Sunil_email_template", {
+      .send("service_ef4l2nb", "template_1", {
         from_name: name,
         from_email: email,
         message: message,
