@@ -34,7 +34,7 @@ export default function Home() {
           <Divider my={7} />
           <TechStackSection />
           <Divider my={7} />
-          <LiveProjectSection />
+          {/* <LiveProjectSection /> */}
         </Container>
       </main>
     </div>

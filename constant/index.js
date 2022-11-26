@@ -138,7 +138,7 @@ const techStacks = [
     icon: (
       <>
         <SiPrometheus fontSize="20px" className="text-orange-500" />
-        <SiGrafana fontSize="20px" className="text-orange-600"/>
+        <SiGrafana fontSize="20px" className="text-orange-600" />
       </>
     ),
     url: "https://prometheus.io/",
@@ -160,7 +160,7 @@ const techStacks = [
 const menuLinks = [
   { name: "About Me", route: "/about" },
   // { name: "Experience", route: "/experience" },
-  // { name: "Projects", route: "/projects" },
+  { name: "Live Projects", route: "/projects" },
   { name: "Github", route: "/github" },
   { name: "Articles", route: "/article" },
   { name: "Contact", route: "/contact" },
@@ -305,36 +305,43 @@ const educations = [
 
 const liveProjects = [
   {
-    name: "Chativo",
+    name: "Learn Maths Quiz",
     imageUrl:
-      "https://play-lh.googleusercontent.com/tgLiP-ZL-sBuZt2RzDU1tN88Cp7NPbdjF7c0311_dui86f1HrAQM0j4gXaRE0pb5zW0=s360-rw",
-    alt: "chativo",
+      "https://play-lh.googleusercontent.com/-BBmID2jDtqf0vc3guqx_SMDPiIZdNKgqK8fpbumjPEe1Z94WVpOYWOn4KIS_XFZAh4=w240-h480-rw",
+    alt: "Learn Maths Quiz",
     summary:
-      "Enterprise ready live-chat base customer support & engagement software",
-    playstore: "https://play.google.com/store/apps/details?id=io.chativo.chat",
-    appstore: "https://apps.apple.com/us/app/chativo/id1545295884",
+      "This app is developed for students to learn maths with qui and also to test their knowledge. This app is developed using Java and Android Studio and is available on Google Play Store.",
+      playstore: "https://play.google.com/store/apps/details?id=com.dhanas.maths",
+    },
+  {
+    name: "Find Dots - Brain Training",
+    imageUrl:
+      "https://play-lh.googleusercontent.com/MI3OibymYzIACP9wEVdyp0Uxu9A0-GLt3QIdmdXxLl9zD6FyRJ-Ry5vvh-0jVqVPkw=w240-h480-rw",
+    alt: "Find Dots - Brain Training",
+    summary:
+      "Our brain training game find dots. This game is developed using Kotlin and Android Studio and is available on Google Play Store.",
+    playstore:
+      "https://play.google.com/store/apps/details?id=com.dhanas.finddotsfun",
   },
   {
-    name: "ChativoV",
+    name: "Rebbit bubble",
     imageUrl:
-      "https://play-lh.googleusercontent.com/5U5s7sSIuzP6CygPkU2ZYxyOXT-MKv7oiyweGKHgkEgVameOcYt44rnXqCTWZJNZgVqn=s360-rw",
-    alt: "chativo-v",
+      "https://play-lh.googleusercontent.com/cRCDuZfVqw6FSGlFkVZ-7DkPOZ8ahQ0N4dMQ1Fn4pddRWHjB5e5K5TD9E_EHMafRX2bM=w240-h480-rw",
+    alt: "Rebbit bubble",
     summary:
-      "Live-chat specifically designed for visitors to communicate with real-time agent instantly",
+      "Rebbit bubble is a bubble shooter game. This game is available on Google Play Store.",
     playstore:
-      "https://play.google.com/store/apps/details?id=io.chativo.visitor",
-    appstore: "https://apps.apple.com/us/app/chativov/id1595519177",
+      "https://play.google.com/store/apps/details?id=com.dhanas.rabbits",
   },
   {
-    name: "ChativoV",
+    name: "Gaint Play",
     imageUrl:
-      "https://play-lh.googleusercontent.com/5U5s7sSIuzP6CygPkU2ZYxyOXT-MKv7oiyweGKHgkEgVameOcYt44rnXqCTWZJNZgVqn=s360-rw",
-    alt: "chativo-v",
+      "https://play-lh.googleusercontent.com/iws1w0-QBRkfh6-dNxOqPLLGXyHfMs3JfLlAKz_uX6JDUGKawadxxnFOqSK66aekb3I=w240-h480-rw",
+    alt: "Gaint Play",
     summary:
-      "Live-chat specifically designed for visitors to communicate with real-time agent instantly",
+      "Gaintplay is a great app to make some extra money. This app is available on Google Play Store.",
     playstore:
-      "https://play.google.com/store/apps/details?id=io.chativo.visitor",
-    appstore: "https://apps.apple.com/us/app/chativov/id1595519177",
+      "https://play.google.com/store/apps/details?id=com.gaintplay.makemoney.android",
   },
 ];
 

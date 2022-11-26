@@ -1,19 +1,26 @@
-import { Container } from "@chakra-ui/react";
+import { Container, Divider } from "@chakra-ui/react";
 import Head from "next/head";
-import React from "react";
-import getGithubRepos from "../constant/getGithubRepos";
-import getMediumArticles from "../constant/getMediumArticles";
-import GithubSection from "../section/GithubSection";
-import MediumSection from "../section/MediumSection";
+import { LiveProjectSection } from "../section/LiveProjectSection";
+import ProfileSection from "../section/ProfileSection";
+// import SpotifySection from '../section/SpotifySection';
+import TechStackSection from "../section/TechStackSection";
 import styles from "../styles/Home.module.css";
+// import useSWR from 'swr';
 
-const Projects = ({ repos, articles }) => {
-  // console.log({ repos, articles });
+export default function Home() {
+  // const fetcher = (url) => fetch(url).then((r) => r.json());
+  // const { data } = useSWR('/api/spotify', fetcher);
+
+  // console.log({data});
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Projects</title>
+        <title> Sunil | Home</title>
+        <meta
+          property="og:title"
+          content="Sunil | Mobile Application Developer"
+        ></meta>
         <meta
           name="description"
           content="Sunil | Mobile Application Developer"
@@ -23,26 +30,9 @@ const Projects = ({ repos, articles }) => {
 
       <main>
         <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
-          <GithubSection repos={repos} />
-          <MediumSection articles={articles} />
+          <LiveProjectSection />
         </Container>
       </main>
     </div>
   );
-};
-
-export default Projects;
-
-export const getStaticProps = async () => {
-  const repos = await getGithubRepos({ username: process.env.GITHUB_USERNAME });
-  const articles = await getMediumArticles({
-    username: process.env.MEDIUM_USERNAME,
-  });
-
-  return {
-    props: {
-      repos: repos || null,
-      articles: articles || null,
-    },
-  };
-};
+}

@@ -52,12 +52,12 @@ export const LiveProjectCard = ({ project }) => (
                             onClick={() => window.open(project.playstore)}
                         />
 
-                        <Image
+                        { project.appstore && <Image
                             src={'/appstore.png'}
                             alt='appstore'
                             objectFit={'cover'}
                             onClick={() => window.open(project.appstore)}
-                        />
+                        />}
                     </VStack>
                 </Flex>
             </Flex>
