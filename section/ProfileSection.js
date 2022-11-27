@@ -18,7 +18,7 @@ import { resume } from "../constant";
 
 const ProfileSection = () => {
   return (
-    <SlideFade in offsetX={80}>
+    <SlideFade in offsetY={500}>
       <Box>
         <Flex alignItems="center" justifyContent="space-between">
           <Heading

@@ -26,7 +26,7 @@ const GithubSection = ({ repos }) => {
 //   console.log(repoarray, "repoarray");
 
   return (
-    <SlideFade in offsetY={80} delay={0.2}>
+    <SlideFade in offsetY={200} delay={0.2}>
       <Heading
         as="h1"
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}

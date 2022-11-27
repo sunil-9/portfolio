@@ -89,7 +89,7 @@ const Contact = () => {
 
       <main>
         <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
-          <SlideFade in offsetX={80}>
+          <SlideFade in offsetY={90}>
             <Flex width="full" align="center" justifyContent="center">
               <Box
                 p={8}

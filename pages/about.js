@@ -36,7 +36,7 @@ function About() {
 
       <main>
         <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
-          <SlideFade in offsetX={80}>
+          <SlideFade in offsetY={500}>
             <Box>
               <UnderlinedText>
                 <Flex alignItems={"center"}>

@@ -11,7 +11,7 @@ import { liveProjects } from "../constant";
 
 export const LiveProjectSection = () => {
   return (
-    <SlideFade in offsetY={90} delay={1.5}>
+    <SlideFade in offsetY={500} delay={0.1}>
       <Heading
         as="h1"
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}
