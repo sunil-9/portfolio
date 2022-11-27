@@ -38,44 +38,36 @@ const ProfileSection = () => {
           </Flex>
         </Flex>
         <Paragraph fontSize="2xl" lineHeight={1.6}>
-          Web/Android Application Developer and Devops engineer from Nepal.
+          Web/Android Application Developer | Devops engineer from Nepal.
         </Paragraph>
         <Paragraph fontSize="2xl" lineHeight={1.6}>
-          Focused on{" "}
+          Excellence in{" "}
           <Link
             color={useColorModeValue("blue.500", "blue.400")}
             href="https://www.android.com/"
             fontWeight="500"
             isExternal
           >
-            Android,
+            Android(Java),
           </Link>{" "}
           <Link
             color={useColorModeValue("blue.500", "blue.400")}
-            href="https://www.apple.com/my/ios"
+            href="https://nextjs.org/"
             fontWeight="500"
             isExternal
           >
-            Web &
-          </Link>{" "}
+            Next Js
+          </Link>
+          {" & "}
           <Link
             color={useColorModeValue("blue.500", "blue.400")}
-            href="https://reactnative.dev/"
+            href="https://www.terraform.io/"
             fontWeight="500"
             isExternal
           >
-            React Native
+            Terrafom
           </Link>
-          .{"\n"}Passion in beautiful UI / UX & Tech Writter on{" "}
-          <Link
-            color={useColorModeValue("blue.500", "blue.400")}
-            href="https://skynight1996.medium.com/"
-            fontWeight="500"
-            isExternal
-          >
-            Medium
-          </Link>
-          . 🔥
+          .{"\n"}Passion in Linux, cloud computing and CI/CD.
         </Paragraph>
 
         <Box mt={5}>
