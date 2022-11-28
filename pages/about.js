@@ -48,7 +48,7 @@ function About() {
               </UnderlinedText>
 
               <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                Hi there, It's Sunil Sapkota from Pokhara Nepal.I am a Android
+                Hi there, It&apos;s Sunil Sapkota from Pokhara Nepal.I am a Android
                 Developer | Node.Js developer | DevOps engineer with 2 years ++
                 working experience. My developer journey started with PHP as
                 backend and Android (java) in front-end during my college
@@ -58,7 +58,7 @@ function About() {
               </Paragraph>
 
               <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                I'm currently working as backend developer/ devops engineer in
+                I&apos;m currently working as backend developer/ devops engineer in
                 Gaintplay. Previously I was working as web developer at
                 Pinesofts which is one of the best web development company in
                 Pokhara and as an IT Head at Race Groups which is renowned firm
