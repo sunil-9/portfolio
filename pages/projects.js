@@ -1,31 +1,26 @@
-import { Container, Divider } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 import Head from "next/head";
 import { LiveProjectSection } from "../section/LiveProjectSection";
-import ProfileSection from "../section/ProfileSection";
-// import SpotifySection from '../section/SpotifySection';
-import TechStackSection from "../section/TechStackSection";
 import styles from "../styles/Home.module.css";
 // import useSWR from 'swr';
 
 export default function Home() {
   // const fetcher = (url) => fetch(url).then((r) => r.json());
-  // const { data } = useSWR('/api/spotify', fetcher);
-
   // console.log({data});
 
   return (
     <div className={styles.container}>
       <Head>
-        <title> Sunil | Home</title>
+        <title> Sunil | Live Project</title>
         <meta
           property="og:title"
-          content="Sunil | Mobile Application Developer"
+          content="Sunil | Android Developer | Node.Js developer | DevOps engineer"
         ></meta>
         <meta
           name="description"
-          content="Sunil | Mobile Application Developer"
+          content="Sunil | Android Developer | Node.Js developer | DevOps engineer"
         />
-        <link rel="icon" href="/profile_picture.png" />
+        <link rel="icon" href="/sunil.jpg" />
       </Head>
 
       <main>

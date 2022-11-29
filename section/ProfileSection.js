@@ -87,8 +87,6 @@ const ProfileSection = () => {
             </ButtonGroup>
           </LightMode>
         </Box>
-
-        {/* <SpotifySection song={song}/> */}
       </Box>
     </SlideFade>
   );
