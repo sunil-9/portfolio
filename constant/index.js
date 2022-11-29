@@ -206,7 +206,7 @@ const siteConfig = {
 };
 
 const resume = {
-  url: "https://drive.google.com/file/d/1KKVBejHxAr2PKhSCFufgnvdQTMUWt-u7/view?usp=sharing",
+  url: "https://drive.google.com/file/d/1SBxpt3V-QqQg7PJLTHoUxcTVvFsJQbY_/view",
   icon: <CgAlbum />,
   name: "Resume",
 };

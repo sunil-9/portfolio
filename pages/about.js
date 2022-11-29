@@ -49,7 +49,7 @@ function About() {
 
               <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
                 Hi there, It&apos;s Sunil Sapkota from Pokhara Nepal.I am a Android
-                Developer | Node.Js developer | DevOps engineer with 2 years ++
+                Developer | Node.Js developer | DevOps engineer with 2 years +
                 working experience. My developer journey started with PHP as
                 backend and Android (java) in front-end during my college
                 projects, and internship. After graduation, this journey
