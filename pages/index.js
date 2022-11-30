@@ -13,14 +13,6 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title> Sunil | Home</title>
-        <meta
-          property="og:title"
-          content="Sunil | Mobile Application Developer"
-        ></meta>
-        <meta
-          name="description"
-          content="Sunil | Mobile Application Developer"
-        />
         <link rel="icon" href="/profile_picture.png" />
       </Head>
 

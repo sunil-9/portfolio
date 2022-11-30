@@ -10,10 +10,7 @@ const Article = ({ articles }) => {
     <div className={styles.container}>
       <Head>
         <title>Sunil | Articles</title>
-        <meta
-          name="description"
-          content="Sunil | Mobile Application Developer"
-        />
+
         <link rel="icon" href="/profile_picture.png" />
       </Head>
       <main>

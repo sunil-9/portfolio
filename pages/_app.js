@@ -9,23 +9,23 @@ function MyApp({ Component, pageProps }) {
       <NextSeo
         title="Sunil Sapkota | Full Stack Developer | Devops Engineer | Nepal"
         description="Sunil Sapkota is a Full Stack Developer and Devops Engineer from Nepal. He is a passionate developer who loves to build things for the web."
-        canonical="https://sunilsapkota.com.np/"
+        canonical="https://sapkotasunil.com.np/"
         openGraph={{
-          url: "https://sunilsapkota.com.np/",
+          url: "https://sapkotasunil.com.np/",
           title:
             "Sunil Sapkota | Full Stack Developer | Devops Engineer | Nepal",
           description:
             "Sunil Sapkota is a Full Stack Developer and Devops Engineer from Nepal. He is a passionate developer who loves to build things for the web.",
           images: [
             {
-              url: "https://sunilsapkota.com.np/sunil.jpg",
+              url: "https://sapkotasunil.com.np/sunil.jpg",
               width: 800,
               height: 600,
               alt: "Sunil Sapkota",
               type: "image/jpeg",
             },
             // {
-            //   url: "https://sunilsapkota.com.np/sunil.jpg",
+            //   url: "https://sapkotasunil.com.np/sunil.jpg",
             //   width: 900,
             //   height: 800,
             //   alt: "Sunil Sapkota",

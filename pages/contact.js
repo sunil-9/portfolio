@@ -80,10 +80,7 @@ const Contact = () => {
     <div className={styles.container}>
       <Head>
         <title>Sunil | Contact</title>
-        <meta
-          name="description"
-          content="Sunil | Mobile Application Developer"
-        />
+        
         <link rel="icon" href="/profile_picture.png" />
       </Head>
 

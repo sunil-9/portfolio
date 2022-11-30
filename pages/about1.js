@@ -26,10 +26,7 @@ function About() {
     <div classNameName={styles.container}>
       <Head>
         <title>About Me</title>
-        <meta
-          name="description"
-          content="Sunil | Mobile Application Developer"
-        />
+
         <link rel="icon" href="/profile_picture.png" />
       </Head>
 
