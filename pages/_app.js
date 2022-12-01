@@ -19,19 +19,7 @@ function MyApp({ Component, pageProps }) {
           images: [
             {
               url: "https://sapkotasunil.com.np/sunil.jpg",
-              width: 800,
-              height: 600,
-              alt: "Sunil Sapkota",
-              type: "image/jpeg",
             },
-            // {
-            //   url: "https://sapkotasunil.com.np/sunil.jpg",
-            //   width: 900,
-            //   height: 800,
-            //   alt: "Sunil Sapkota",
-            //   type: "image/jpeg",
-            // },
-            // { url: "" },
           ],
           siteName: "Sunil Sapkota",
         }}
