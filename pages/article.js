@@ -11,7 +11,7 @@ const Article = ({ articles }) => {
       <Head>
         <title>Sunil | Articles</title>
 
-        <link rel="icon" href="/profile_picture.png" />
+        <link rel="icon" href="/sunil.jpg" />
       </Head>
       <main>
         <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>

@@ -13,7 +13,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title> Sunil | Home</title>
-        <link rel="icon" href="/profile_picture.png" />
+        <link rel="icon" href="/sunil.jpg" />
       </Head>
 
       <main>

@@ -28,7 +28,7 @@ function About() {
       <Head>
         <title>About Me</title>
 
-        <link rel="icon" href="/profile_picture.png" />
+        <link rel="icon" href="/sunil.jpg" />
       </Head>
 
       <main>

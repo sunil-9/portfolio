@@ -81,7 +81,7 @@ const Contact = () => {
       <Head>
         <title>Sunil | Contact</title>
         
-        <link rel="icon" href="/profile_picture.png" />
+        <link rel="icon" href="/sunil.jpg" />
       </Head>
 
       <main>
