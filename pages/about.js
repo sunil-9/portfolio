@@ -45,29 +45,31 @@ function About() {
               </UnderlinedText>
 
               <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                Hi there, It&apos;s Sunil Sapkota from Pokhara Nepal.I am a Android
-                Developer | Node.Js developer | DevOps engineer with 2 years +
-                working experience. My developer journey started with PHP as
-                backend and Android (java) in front-end during my college
-                projects, and internship. After graduation, this journey
-                continued with Node.js and PHP for back-end development, reactjs
-                for front-end and Terraform, and linux for server maintainance.
+                Hi there, It&apos;s Sunil Sapkota from Pokhara Nepal. I am an
+                Android Developer | Node.Js developer | and DevOps engineer with
+                2 years + of working experience. My developer journey started
+                with PHP as the backend and Android (java) as the front end
+                during my college projects and internship. After graduation,
+                this journey continued with Node.js and PHP for back-end
+                development, react.js for front-end and Terraform, and Linux for
+                server maintenance.
               </Paragraph>
 
               <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                I&apos;m currently working as backend developer/ devops engineer in
-                Gaintplay. Previously I was working as web developer at
-                Pinesofts which is one of the best web development company in
-                Pokhara and as an IT Head at Race Groups which is renowned firm
-                with four branch working their respect field.
+                I&apos;m currently working as a backend developer/ DevOps
+                engineer in Gaintplay. Previously I was working as a web
+                developer at Pinesofts which is one of the best web development
+                companies in Pokhara and as an IT Head at Race Groups which is a
+                renowned firm with four branches working in their respective
+                field.
               </Paragraph>
               <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
                 I am a self-motivated and hard-working person. I am always ready
                 to learn new things and improve my skills. I am a team player
                 and can work under pressure. I am also a quick learner and can
-                adapt to new environments easily.My proficiency is web
-                development, android developer, and cloud development especially
-                on AWS and Linode🔥
+                adapt to new environments easily. My proficiency is web
+                development, android developer, and cloud development,
+                especially on AWS and Linode.🔥
               </Paragraph>
 
               <Flex alignItems="center" my={10}>
