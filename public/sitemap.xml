@@ -10,9 +10,9 @@
 
 <url>
   <loc>https://www.sapkotasunil.com.np/</loc>
-  <image:image>
-      <image:loc>https://www.sapkotasunil.com.np/sunil.jpg</image:loc>
-    </image:image>
+      <image:image>
+        <image:loc>https://www.sapkotasunil.com.np/sunil.jpg</image:loc>
+      </image:image>
   <lastmod>2022-11-29T15:33:17+00:00</lastmod>
   <priority>1.00</priority>
 </url>
