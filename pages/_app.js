@@ -65,8 +65,7 @@ function MyApp({ Component, pageProps }) {
           name="twitter:image"
           content="https://sapkotasunil.com.np/sunil.jpg"
         />
-            <Script type="application/ld+json">
-{
+            <Script dangerouslySetInnerHTML={`
   "@context": "https://schema.org/",
   "@type": "Person",
   "name": "sunil sapktoa",
@@ -82,7 +81,8 @@ function MyApp({ Component, pageProps }) {
     "@type": "Organization",
     "name": "Ad break media"
   }  
-}
+`} type="application/ld+json">
+
 </Script>
       </Head>
       <ChakraProvider>
