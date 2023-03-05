@@ -31,9 +31,9 @@ function MyApp({ Component, pageProps }) {
           Sunil Sapkota | Full Stack Developer | Devops Engineer | Nepal
         </title>
         <link rel="icon" href="/favicon.ico" />
-        <title>
-          Sunil Sapkota | Full Stack Developer | Devops Engineer | Nepal
-        </title>
+		<meta property="fb:admins" content="104280557787678" />
+		<meta property="fb:page_id" content="104280557787678" />
+		<meta property="fb:app_id" content="104280557787678" />
         <meta
           name="description"
           content="Sunil Sapkota is a Full Stack Developer and Devops Engineer from Nepal. He is a passionate developer who loves to build things for the web."
