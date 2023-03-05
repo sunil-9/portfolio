@@ -4,6 +4,7 @@ import { NextSeo } from "next-seo";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import "../styles/globals.css";
+import Script from "next/script"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -64,7 +65,7 @@ function MyApp({ Component, pageProps }) {
           name="twitter:image"
           content="https://sapkotasunil.com.np/sunil.jpg"
         />
-            <script type="application/ld+json">
+            <Script type="application/ld+json">
 {
   "@context": "https://schema.org/",
   "@type": "Person",
@@ -82,7 +83,7 @@ function MyApp({ Component, pageProps }) {
     "name": "Ad break media"
   }  
 }
-</script>
+</Script>
       </Head>
       <ChakraProvider>
         <Layout>
