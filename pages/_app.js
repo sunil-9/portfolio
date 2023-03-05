@@ -31,9 +31,6 @@ function MyApp({ Component, pageProps }) {
           Sunil Sapkota | Full Stack Developer | Devops Engineer | Nepal
         </title>
         <link rel="icon" href="/favicon.ico" />
-        <title>
-          Sunil Sapkota | Full Stack Developer | Devops Engineer | Nepal
-        </title>
         <meta
           name="description"
           content="Sunil Sapkota is a Full Stack Developer and Devops Engineer from Nepal. He is a passionate developer who loves to build things for the web."
@@ -67,6 +64,25 @@ function MyApp({ Component, pageProps }) {
           name="twitter:image"
           content="https://sapkotasunil.com.np/sunil.jpg"
         />
+            <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "sunil sapktoa",
+  "url": "https://sapkotasunil.com.np",
+  "image": "https://sapkotasunil.com.np/sunil.jpg",
+  "sameAs": [
+    "https://www.facebook.com/sunil.sapkota.09",
+    "https://github.com/sunil-9",
+    "https://www.linkedin.com/in/sunilsapkota09/"
+  ],
+  "jobTitle": "senior Backend Developer / cloud Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Ad break media"
+  }  
+}
+</script>
       </Head>
       <ChakraProvider>
         <Layout>
