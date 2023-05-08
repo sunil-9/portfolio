@@ -8,8 +8,7 @@ import {
   FaLinkedin,
   FaMedium,
   FaPhp,
-  FaReact,
-  FaStackOverflow,
+  FaStackOverflow
 } from "react-icons/fa";
 import {
   SiDart,
@@ -29,22 +28,18 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
+
+
 const techStacks = [
   {
     name: "Android",
-    category: "Moblile Development",
+    category: "Mobile Development",
     icon: <FaAndroid fontSize="20px" className="text-green-500" />,
     url: "https://www.android.com/",
   },
   {
-    name: "React Native",
-    category: "Moblile Development",
-    icon: <FaReact fontSize="20px" className="text-blue-500" />,
-    url: "https://reactnative.dev/",
-  },
-  {
     name: "Kotlin",
-    category: "Moblile Development",
+    category: "Mobile Development",
     icon: <SiKotlin fontSize="20px" className="text-purple-500" />,
     url: "https://kotlinlang.org/",
   },
@@ -379,3 +374,4 @@ export {
   // techStacksDevOps,
   // techStacksAndroid,
 };
+
