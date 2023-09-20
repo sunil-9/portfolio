@@ -201,7 +201,8 @@ const siteConfig = {
 };
 
 const resume = {
-  url: "https://drive.google.com/file/d/1SBxpt3V-QqQg7PJLTHoUxcTVvFsJQbY_/view",
+  // url: "https://drive.google.com/file/d/1SBxpt3V-QqQg7PJLTHoUxcTVvFsJQbY_/view",
+  url: "https://sapkotasunil.com.np/resume.pdf",
   icon: <CgAlbum />,
   name: "Resume",
 };
