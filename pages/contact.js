@@ -44,7 +44,7 @@ const Contact = () => {
     setIsLoading(true);
 
     emailjs
-      .send("service_ef4l2nb", "template_1", {
+      .send("service_dou4pzg", "template_1", {
         from_name: name,
         from_email: email,
         message: message,
