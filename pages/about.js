@@ -45,31 +45,20 @@ function About() {
               </UnderlinedText>
 
               <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                Hi there, It&apos;s Sunil Sapkota from Pokhara Nepal. I am an
-                Android Developer | Node.Js developer | and DevOps engineer with
-                2 years + of working experience. My developer journey started
-                with PHP as the backend and Android (java) as the front end
-                during my college projects and internship. After graduation,
-                this journey continued with Node.js and PHP for back-end
-                development, react.js for front-end and Terraform, and Linux for
-                server maintenance.
+                Hi, I&apos;m Sunil Sapkota from Australia. With more than five years of professional experience, I&apos;ve built a versatile skill set across web development, Android development, machine learning, and DevOps. My academic journey of a Master&apos;s in Information Technology from Victoria University Sydney, complemented by a strong foundation in software development and management from my Bachelor&apos;s in Computer Applications at La Grandee International College.
               </Paragraph>
 
               <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                I&apos;m currently working as a backend developer/ DevOps
-                engineer in Gaintplay. Previously I was working as a web
-                developer at Pinesofts which is one of the best web development
-                companies in Pokhara and as an IT Head at Race Groups which is a
-                renowned firm with four branches working in their respective
-                field.
+                During college, I began honing my skills in PHP backend and Java-based Android applications. Post-graduation, I deepened my expertise in full-stack development—specializing in Node.js and PHP on the backend and React.js for frontend work. In parallel, I embraced infrastructure and automation with Linux systems, Docker, Kubernetes, Terraform, and AWS, evolving into a well-rounded DevOps practitioner.
               </Paragraph>
               <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                I am a self-motivated and hard-working person. I am always ready
-                to learn new things and improve my skills. I am a team player
-                and can work under pressure. I am also a quick learner and can
-                adapt to new environments easily. My proficiency is web
-                development, android developer, and cloud development,
-                especially on AWS and Linode.🔥
+                My recent roles reflect this blend of disciplines. I served as Assistant Professor at both La Grandee International College and the International School of Management and Technology (ISMT), where I taught Android, Linux, Machine Learning, supported curriculum design, supervised student projects, and contributed to administrative operations. Concurrently, at Oarkflow, I worked as a Full Stack / Machine Learning Engineer, developing production-ready ML systems alongside backend and React.js front ends.
+              </Paragraph>
+              <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
+                Earlier in my career, I worked with Gaintplay (Ad Break Media) as a Node.js Backend Developer and DevOps Engineer, handling cloud deployments, Kubernetes on Linode, CI/CD pipelines, and server management. At Race Groups, where I advanced to IT Head, I led development on PHP and MySQL systems, implemented CI/CD processes, managed Docker infrastructure, and oversaw technical operations across four branches.
+              </Paragraph>
+              <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
+                I&apos;m a self-driven and resilient professional who thrives in collaborative and high-pressure environments. I continually pursue new learning opportunities to expand my technical and leadership abilities. My key strengths lie in web development, Android development, DevOps infrastructure, and supporting cloud-based systems, especially within AWS environments.🔥
               </Paragraph>
 
               <Flex alignItems="center" my={10}>

@@ -44,28 +44,29 @@ const ProfileSection = () => {
           Excellence in{" "}
           <Link
             color={useColorModeValue("blue.500", "blue.400")}
-            href="https://www.android.com/"
-            fontWeight="500"
-            isExternal
-          >
-            Android(Java),
-          </Link>{" "}
-          <Link
-            color={useColorModeValue("blue.500", "blue.400")}
             href="https://nextjs.org/"
             fontWeight="500"
             isExternal
           >
-            Next Js
+            Next Js(Typescript),
           </Link>
-          {" & "}
+          {" "}
           <Link
             color={useColorModeValue("blue.500", "blue.400")}
             href="https://www.terraform.io/"
             fontWeight="500"
             isExternal
-          >
+            >
             Terrafom
+          </Link>
+            {" & "}
+          <Link
+            color={useColorModeValue("blue.500", "blue.400")}
+            href="https://www.android.com/"
+            fontWeight="500"
+            isExternal
+          >
+            Android(Java)
           </Link>
           .{"\n"}Passion in Linux, cloud computing and CI/CD.
         </Paragraph>

@@ -11,6 +11,7 @@ import {
 import { MotionBox } from '../utils/motion';
 import Paragraph from './Paragraph';
 import { FaGooglePlay, FaAppStoreIos } from 'react-icons/fa';
+import { Button } from '@chakra-ui/button';
 
 export const LiveProjectCard = ({ project }) => (
     <MotionBox whileHover={{ y: -5 }}>
@@ -45,12 +46,12 @@ export const LiveProjectCard = ({ project }) => (
                     </Paragraph>
 
                     <VStack my={2} p={3}>
-                        <Image
+                        {project.playstore && <Image
                             src={'/playstore.png'}
                             alt='playstore'
                             objectFit={'cover'}
                             onClick={() => window.open(project.playstore)}
-                        />
+                        />}
 
                         { project.appstore && <Image
                             src={'/appstore.png'}
@@ -58,6 +59,23 @@ export const LiveProjectCard = ({ project }) => (
                             objectFit={'cover'}
                             onClick={() => window.open(project.appstore)}
                         />}
+                       {project.website && (
+                            <LinkOverlay href={project.website} isExternal>
+                                <Button
+                                mt={2}
+                                colorScheme="blue"
+                                variant="solid"
+                                size="sm"
+                                fontWeight="500"
+                                borderRadius="md"
+                                px={4}
+                                py={2}
+                                _hover={{ bg: "blue.600" }}
+                                >
+                                Visit Website
+                                </Button>
+                            </LinkOverlay>
+                        )}
                     </VStack>
                 </Flex>
             </Flex>

@@ -26,94 +26,108 @@ import {
   SiPrometheus,
   SiTerraform,
   SiTypescript,
+  SiMysql,
+  SiMongodb 
 } from "react-icons/si";
 
 
 
 const techStacks = [
   {
+    name: "Typescript",
+    category: "Language",
+    icon: <SiTypescript fontSize="30px" className="text-blue-500" />,
+    url: "https://www.typescriptlang.org/",
+  },
+  {
+    name: "Javascript",
+    category: "Language",
+    icon: <FaJs fontSize="30px" className="text-yellow-400" />,
+    url: "https://www.javascript.com/",
+  },
+  {
+    name: "Mysql Database",
+    category: "Database",
+    icon: <SiMysql  fontSize="30px" className="text-yellow-500" />,
+    url: "https://www.mysql.com/",
+  },
+  {
+    name: "MongoDB",
+    category: "Database",
+    icon: <SiMongodb   fontSize="30px" className="text-green-500" />,
+    url: "https://www.mongodb.com/",
+  },
+  {
     name: "Android",
     category: "Mobile Development",
-    icon: <FaAndroid fontSize="20px" className="text-green-500" />,
+    icon: <FaAndroid fontSize="30px" className="text-green-500" />,
     url: "https://www.android.com/",
   },
   {
     name: "Kotlin",
     category: "Mobile Development",
-    icon: <SiKotlin fontSize="20px" className="text-purple-500" />,
+    icon: <SiKotlin fontSize="30px" className="text-purple-500" />,
     url: "https://kotlinlang.org/",
   },
   {
     name: "Java",
     category: "Language",
-    icon: <FaJava fontSize="20px" />,
+    icon: <FaJava fontSize="30px" />,
     url: "https://www.java.com/en/",
   },
   {
     name: "Dart",
     category: "Language",
-    icon: <SiDart fontSize="20px" className="text-blue-500" />,
+    icon: <SiDart fontSize="30px" className="text-blue-500" />,
     url: "https://dart.dev/",
-  },
-  {
-    name: "Javascript",
-    category: "Language",
-    icon: <FaJs fontSize="20px" className="text-yellow-400" />,
-    url: "https://www.javascript.com/",
-  },
-  {
-    name: "Typescript",
-    category: "Language",
-    icon: <SiTypescript fontSize="20px" className="text-blue-500" />,
-    url: "https://www.typescriptlang.org/",
   },
   {
     name: "Terraform",
     category: "Language",
-    icon: <SiTerraform fontSize="20px" className="text-purple-500" />,
+    icon: <SiTerraform fontSize="30px" className="text-purple-500" />,
     url: "https://www.terraform.io/",
   },
   {
     name: "PHP",
     category: "Language",
-    icon: <FaPhp fontSize="20px" className="text-blue-300" />,
+    icon: <FaPhp fontSize="30px" className="text-blue-300" />,
     url: "https://www.php.net/",
   },
   {
     name: "Firebase",
     category: "Web Development",
-    icon: <SiFirebase fontSize="20px" className="text-yellow-400" />,
+    icon: <SiFirebase fontSize="30px" className="text-yellow-400" />,
     url: "https://firebase.google.com/",
   },
   {
     name: "Laravel",
     category: "Web Development",
-    icon: <SiLaravel fontSize="20px" className="text-red-600" />,
+    icon: <SiLaravel fontSize="30px" className="text-red-600" />,
     url: "https://laravel.com/",
   },
   {
     name: "Next.js",
     category: "Web Development",
-    icon: <SiNextdotjs fontSize="20px" />,
+    icon: <SiNextdotjs fontSize="30px" />,
     url: "https://nextjs.org/",
   },
   {
     name: "Github Actions",
     category: "DevOps",
-    icon: <FaGitAlt fontSize="20px" />,
+    icon: <FaGitAlt fontSize="30px" />,
     url: "https://www.github.com/",
   },
   {
     name: "Linux",
     category: "DevOps",
-    icon: <SiLinux fontSize="20px" />,
+    icon: <SiLinux fontSize="30px" />,
     url: "https://www.linux.com/",
   },
   {
-    // icon: <FaGitAlt fontSize="20px" />,
+    // icon: <FaGitAlt fontSize="30px" />,
     name: "Jenkins",
     category: "DevOps",
-    icon: <SiJenkins fontSize="20px" />,
+    icon: <SiJenkins fontSize="30px" />,
     url: "https://www.jenkins.io/",
   },
   {
@@ -121,8 +135,8 @@ const techStacks = [
     category: "DevOps",
     icon: (
       <>
-        <SiDocker fontSize="20px" className="text-blue-400" />
-        <SiKubernetes fontSize="20px" className="text-blue-600" />
+        <SiDocker fontSize="30px" className="text-blue-400" />
+        <SiKubernetes fontSize="30px" className="text-blue-600" />
       </>
     ),
     url: "https://www.docker.com/",
@@ -132,20 +146,20 @@ const techStacks = [
     category: "DevOps",
     icon: (
       <>
-        <SiPrometheus fontSize="20px" className="text-orange-500" />
-        <SiGrafana fontSize="20px" className="text-orange-600" />
+        <SiPrometheus fontSize="30px" className="text-orange-500" />
+        <SiGrafana fontSize="30px" className="text-orange-600" />
       </>
     ),
     url: "https://prometheus.io/",
   },
   {
-    // icon: <FaGitAlt fontSize="20px" />,
+    // icon: <FaGitAlt fontSize="30px" />,
     name: "CI/CD - Fastlane & Terraform",
     category: "DevOps",
     icon: (
       <>
-        <SiFastlane fontSize="20px" />
-        <SiTerraform fontSize="20px" className="text-purple-500" />
+        <SiFastlane fontSize="30px" />
+        <SiTerraform fontSize="30px" className="text-purple-500" />
       </>
     ),
     url: "https://fastlane.tools/",
@@ -252,8 +266,52 @@ const resume = {
 
 const companies = [
   {
-    title: "Gaintplay",
-    alt: "qumon image",
+    title: "International School of Management and Technology (ISMT) college",
+    alt: "International School of Management and Technology (ISMT) college logo",
+    url: "https://ismt.edu.np/",
+    role: "Assistant Professor",
+    skills: [
+      "Machine Learning teaching",
+      "Business Process Support Teaching",
+      "Project Management",
+      "Administration"
+    ],
+    period: "July 2024 - July 2025",
+    logo: "/ismt.png",
+  },
+  {
+    title: "Oarkflow",
+    alt: "Oarkflow logo",
+    url: "https://oarkflow.com/",
+    role: "Full Stack / ML Engineer",
+    skills: [
+      "ML Development",
+      "Backend Development",
+      "react.js (Frontend)",
+      
+    ],
+    period: "Nov 2024 - July 2025",
+    logo: "/oarkflow.png",
+  },
+  {
+    title: "La Grandee International College",
+    alt: "La Grandee International College logo",
+    url: "https://lagrandee.edu.np/",
+    role: "Assistant Professor",
+    skills: [
+      "Android teaching",
+      "Linux Teaching",
+      "Project Management",
+      "Administration",
+      "Curriculum Development",
+      "project supervision",
+    ],
+    period: "Jan 2023 - July 2025",
+    logo: "/la.jpg",
+  },
+  {
+    title: "Ad Break Media/Gaintplay LLC",
+    alt: "Ad Break Media/Gaintplay LLC logo",
     url: "https://gaintplay.com/",
     role: "Node.js Backend Developer / Devops Engineer",
     skills: [
@@ -263,40 +321,51 @@ const companies = [
       "Kubernetes",
       "Linode LKE",
       "terraform",
+      "Cloud Computing",
+      "DNS and Server Management",
     ],
-    period: "May 2022 - Present",
+    period: "Jan 2022 - Jan 2024",
     logo: "/gaintplay.png",
   },
   {
     title: "Race Groups",
     alt: "race groups",
     url: "https://racegroups.com/",
-    role: "Inrastructure Engineer/ IT head",
+    role: "Developer / IT Head",
     skills: [
-      "Android",
+      "project management",
       "PHP",
-      "API Testing",
-      "AWS",
+      "API Development/Testing",
+      "MySQL database",
       "Docker",
       "CI/CD",
       "Linux",
+
     ],
-    period: "Dec 2020 - Jan 2022",
+    period: "Nov 2020 - Jan 2022",
     logo: "/race.png",
   },
 ];
 
 const educations = [
   {
+    title: "Victoria University of Sydney",
+    alt: "victoria university image",
+    url: "https://www.vu.edu.au/",
+    role: "Master's Degree in Information Technology",
+    skills: [
+      "Running",
+    ],
+    period: "Sept 2016 - Sept 2021",
+    logo: "/vu.jpg",
+  },
+  {
     title: "Lagrandee International College (LGIC)",
     alt: "la grandee image",
     url: "https://lagrandee.edu.np/",
     role: "Bachelor's Degree in Computer Application",
     skills: [
-      "CGPA - 3.03",
-      "software development",
-      "Android Application Development",
-      "Application Security",
+      "CGPA - 3.03"
     ],
     period: "Sept 2016 - Sept 2021",
     logo: "/la.jpg",
@@ -306,58 +375,58 @@ const educations = [
     alt: "spiral galaxy image",
     url: "https://spiralgalaxy.edu.np/",
     role: "+2 in Management and Computer Science",
-    skills: ["65%", "C", "Networking", "mathematics", "Digital logic"],
+    skills: ["First Division", ],
     period: "Jan 2014 - Jun 2016",
     logo: "/sghss.jpg",
   },
-  // {
-  //   title: "Hemja Boarding School",
-  //   alt: "hemja boarding image",
-  //   url: "https://www.facebook.com/profile.php?id=100057032697172",
-  //   role: "SLC",
-  //   skills: ["70%", "Computer Basics", "HTML", "CSS"],
-  //   period: "Jan 2014 - Jun 2016",
-  //   logo: "/sghss.jpg",
-  // },
+  {
+    title: "Hemja Boarding School",
+    alt: "hemja boarding image",
+    url: "https://www.facebook.com/profile.php?id=100057032697172",
+    role: "SLC",
+    skills: ["First Division", ],
+    period: "Jan 2001 - Jun 2014",
+    logo: "/hbs.jpg",
+  },
 ];
 
 const liveProjects = [
   {
-    name: "Learn Maths Quiz",
+    name: "Oarkflow",
     imageUrl:
-      "https://play-lh.googleusercontent.com/-BBmID2jDtqf0vc3guqx_SMDPiIZdNKgqK8fpbumjPEe1Z94WVpOYWOn4KIS_XFZAh4=w240-h480-rw",
+      "/oarkflow.png",
     alt: "Learn Maths Quiz",
     summary:
-      "This app is developed for students to learn maths with qui and also to test their knowledge. This app is developed using Java and Android Studio and is available on Google Play Store.",
-    playstore: "https://play.google.com/store/apps/details?id=com.dhanas.maths",
+      "Use operations and build your business flow pipeline efficiently. Clean CSV, Validate Phone and many tools essential for your business.",
+      website: "https://oarkflow.com/",
   },
   {
-    name: "Find Dots - Brain Training",
+    name: "Ad Break Media",
     imageUrl:
-      "https://play-lh.googleusercontent.com/MI3OibymYzIACP9wEVdyp0Uxu9A0-GLt3QIdmdXxLl9zD6FyRJ-Ry5vvh-0jVqVPkw=w240-h480-rw",
-    alt: "Find Dots - Brain Training",
+      "/adbreak.svg",
+    alt: "Ad Break Media",
     summary:
-      "Our brain training game find dots. This game is developed using Kotlin and Android Studio and is available on Google Play Store.",
-    playstore:
-      "https://play.google.com/store/apps/details?id=com.dhanas.finddotsfun",
+      "Elevate your apps with offerwall ads. Monetize without compromising user experience. Earn money while expressing opinions and playing.",
+    website: "https://adbreakmedia.com/",
   },
   {
-    name: "Rebbit bubble",
+    name: "Race Groups",
     imageUrl:
-      "https://play-lh.googleusercontent.com/cRCDuZfVqw6FSGlFkVZ-7DkPOZ8ahQ0N4dMQ1Fn4pddRWHjB5e5K5TD9E_EHMafRX2bM=w240-h480-rw",
-    alt: "Rebbit bubble",
+      "race.png",
+    alt: "Race Groups",
     summary:
-      "Rebbit bubble is a bubble shooter game. This game is available on Google Play Store.",
-    playstore:
-      "https://play.google.com/store/apps/details?id=com.dhanas.rabbits",
-  },
-  {
+      "One of the top construction firms in Nepal, Race Groups offers services in architecture, building, interior design, and house remodeling. A one-stop solution for all your construction needs.",
+    website:
+      "https://racegroups.com/",
+    },
+    {
+    
     name: "Gaint Play",
     imageUrl:
       "https://play-lh.googleusercontent.com/iws1w0-QBRkfh6-dNxOqPLLGXyHfMs3JfLlAKz_uX6JDUGKawadxxnFOqSK66aekb3I=w240-h480-rw",
     alt: "Gaint Play",
     summary:
-      "Gaintplay is a great app to make some extra money. This app is available on Google Play Store.",
+      "Gaintplay is a next-generation Cash/Crypto rewards platform, Users earn free Crypto/Cash by interacting and completing tasks. ",
     playstore:
       "https://play.google.com/store/apps/details?id=com.gaintplay.makemoney.android",
   },

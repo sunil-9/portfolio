@@ -10,6 +10,7 @@ import {
 import React from "react";
 import GithubCard from "../components/GithubCard";
 import Paragraph from "../components/Paragraph";
+import { MotionBox } from "../utils/motion";
 
 const GithubSection = ({ repos }) => {
   const [openTab, setOpenTab] = React.useState(1);
@@ -46,9 +47,9 @@ const GithubSection = ({ repos }) => {
           role="tablist"
         >
           {languages.map((language, index) => (
-            // <MotionBox whileHover={{ y: -5 }}  key={index} _hover={{
-            //   borderColor: "blue.500",
-            // }}>
+            <MotionBox whileHover={{ y: -5 }}  key={index} _hover={{
+              borderColor: "blue.500",
+            }}>
 
             <li
               className="-mb-px mr-2 last:mr-0 flex-auto text-center hover:scale-110"
@@ -75,7 +76,7 @@ const GithubSection = ({ repos }) => {
                 {language !== null ? language : "Others"}
               </a>
             </li>
-            // </MotionBox>
+             </MotionBox>
           ))}
         </ul>
         <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded">
