@@ -356,7 +356,7 @@ const educations = [
     skills: [
       "Running",
     ],
-    period: "Sept 2016 - Sept 2021",
+    period: "July 2025 - Current",
     logo: "/vu.jpg",
   },
   {
