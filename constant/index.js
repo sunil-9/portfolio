@@ -328,6 +328,20 @@ const companies = [
     logo: "/gaintplay.png",
   },
   {
+    title: "Tutoral Hub",
+    alt: "Tutoral Hub logo",
+    url: "https://dds.com.np/",
+    role: "Personal Project",
+    skills: [
+      "javascript",
+      "Typescript",
+      "Document Management System",
+      "docusaurus",
+    ],
+    period: "Jan 2022 - Jan 2024",
+    logo: "/dds.svg",
+  },
+  {
     title: "Race Groups",
     alt: "race groups",
     url: "https://racegroups.com/",
@@ -399,6 +413,15 @@ const liveProjects = [
     summary:
       "Use operations and build your business flow pipeline efficiently. Clean CSV, Validate Phone and many tools essential for your business.",
       website: "https://oarkflow.com/",
+  },
+  {
+    name: "Study website",
+    imageUrl:
+      "/dds.png",
+    alt: "Tutoral Hub",
+    summary:
+      "Your comprehensive resource for BCA studies at Pokhara University. Access important questions, course content, and study materials all in one place.",
+      website: "https://dds.com.np/",
   },
   {
     name: "Ad Break Media",
