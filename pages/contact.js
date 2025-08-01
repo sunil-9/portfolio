@@ -85,14 +85,14 @@ const Contact = () => {
       </Head>
 
       <main>
-        <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
+        <Container maxW="container.lg" mt={["5", "10"]} className="mb-10">
           <SlideFade in offsetY={90}>
             <Flex width="full" align="center" justifyContent="center">
               <Box
-                p={8}
+                p={6}
                 maxWidth="container.lg"
                 borderWidth={1}
-                borderRadius={8}
+                borderRadius={12}
                 boxShadow="lg"
               >
                 <Heading size={"lg"}>

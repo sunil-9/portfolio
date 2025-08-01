@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }) {
 		<meta property="fb:app_id" content="104280557787678" />
         <meta
           name="description"
-          content="Sunil Sapkota is a Full Stack Developer and Devops Engineer from Nepal. He is a passionate developer who loves to build things for the web."
+          content="Sunil Sapkota is a Full Stack Developer and Devops Engineer from Australia. He is a passionate developer who loves to build things for the web."
         />
 
         <meta property="og:url" content="https://sapkotasunil.com.np" />
@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:description"
-          content="Sunil Sapkota is a Full Stack Developer and Devops Engineer from Nepal. He is a passionate developer who loves to build things for the web."
+          content="Sunil Sapkota is a Full Stack Developer and Devops Engineer from Australia. He is a passionate developer who loves to build things for the web."
         />
         <meta
           property="og:image"
@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name="twitter:description"
-          content="Sunil Sapkota is a Full Stack Developer and Devops Engineer from Nepal. He is a passionate developer who loves to build things for the web."
+          content="Sunil Sapkota is a Full Stack Developer and Devops Engineer from Australia. He is a passionate developer who loves to build things for the web."
         />
         <meta
           name="twitter:image"

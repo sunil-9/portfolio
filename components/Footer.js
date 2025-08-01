@@ -28,6 +28,7 @@ const Footer = () => {
           w={["100%", "90%", "90%"]}
           maxW='container.lg'
           mx="auto"
+          className="mb-14"
         >
           <Flex
             flexDirection={["column", "column", "row"]}

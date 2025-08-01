@@ -10,7 +10,7 @@ function Layout({children}) {
             <Box 
                 as="main"
                 pt={{ base: "12", md: "0" }}  // Add top padding for mobile top bar
-                pb={{ base: "65px", md: "0" }} // Add bottom padding for mobile bottom nav
+                pb={{ base: "20px", md: "0" }} // Add bottom padding for mobile bottom nav
             >
                 {children}
             </Box>

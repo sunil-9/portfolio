@@ -44,7 +44,7 @@ function About() {
                 </Flex>
               </UnderlinedText>
 
-              <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
+              <Paragraph className='text-justify' fontSize="lg" lineHeight={1.6} my={5}>
                 Hi, I&apos;m Sunil Sapkota from Australia. With more than five years of professional experience, I&apos;ve built a versatile skill set across web development, Android development, machine learning, and DevOps. My academic journey of a Master&apos;s in Information Technology from Victoria University Sydney, complemented by a strong foundation in software development and management from my Bachelor&apos;s in Computer Applications at La Grandee International College.
               </Paragraph>
 

@@ -38,7 +38,7 @@ const ProfileSection = () => {
           </Flex>
         </Flex>
         <Paragraph fontSize="2xl" lineHeight={1.6}>
-          Web/Android Application Developer | Devops engineer from Nepal.
+          Web/Android Application Developer | Devops engineer from Australia.
         </Paragraph>
         <Paragraph fontSize="2xl" lineHeight={1.6}>
           Excellence in{" "}

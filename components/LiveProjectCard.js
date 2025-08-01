@@ -41,7 +41,7 @@ export const LiveProjectCard = ({ project }) => (
                     <Heading as="h2" fontSize="lg" fontWeight="600" color={"blue.400"}>
                         {project.name}
                     </Heading>
-                    <Paragraph mt={'10px'}>
+                    <Paragraph mt={'10px'} className="text-justify">
                         <Text>{project.summary}</Text>
                     </Paragraph>
 
