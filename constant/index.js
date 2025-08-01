@@ -265,6 +265,20 @@ const resume = {
 // ];
 
 const companies = [
+    {
+    title: "Tutoral Hub",
+    alt: "Tutoral Hub logo",
+    url: "https://dds.com.np/",
+    role: "Personal Project",
+    skills: [
+      "javascript",
+      "Typescript",
+      "Document Management System",
+      "docusaurus",
+    ],
+    period: "Jan 2022 - Present",
+    logo: "/dds.svg",
+  },
   {
     title: "International School of Management and Technology (ISMT) college",
     alt: "International School of Management and Technology (ISMT) college logo",
@@ -326,20 +340,6 @@ const companies = [
     ],
     period: "Jan 2022 - Jan 2024",
     logo: "/gaintplay.png",
-  },
-  {
-    title: "Tutoral Hub",
-    alt: "Tutoral Hub logo",
-    url: "https://dds.com.np/",
-    role: "Personal Project",
-    skills: [
-      "javascript",
-      "Typescript",
-      "Document Management System",
-      "docusaurus",
-    ],
-    period: "Jan 2022 - Jan 2024",
-    logo: "/dds.svg",
   },
   {
     title: "Race Groups",
