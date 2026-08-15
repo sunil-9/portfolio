@@ -8,9 +8,12 @@ import {
   FaLinkedin,
   FaMedium,
   FaPhp,
+  FaRobot,
   FaStackOverflow
 } from "react-icons/fa";
+import { GiRobotAntennas } from "react-icons/gi";
 import {
+  SiCplusplus,
   SiDart,
   SiDocker,
   SiFastlane,
@@ -23,16 +26,48 @@ import {
   SiLaravel,
   SiLinux,
   SiNextdotjs,
+  SiNvidia,
   SiPrometheus,
+  SiPython,
   SiTerraform,
   SiTypescript,
   SiMysql,
-  SiMongodb 
+  SiMongodb
 } from "react-icons/si";
 
 
 
 const techStacks = [
+  {
+    name: "ROS2",
+    category: "Robotics",
+    icon: <FaRobot fontSize="30px" className="text-blue-500" />,
+    url: "https://docs.ros.org/en/rolling/",
+  },
+  {
+    name: "MuJoCo",
+    category: "Robotics",
+    icon: <GiRobotAntennas fontSize="30px" className="text-gray-500" />,
+    url: "https://mujoco.org/",
+  },
+  {
+    name: "NVIDIA Isaac Sim",
+    category: "Robotics",
+    icon: <SiNvidia fontSize="30px" className="text-green-500" />,
+    url: "https://developer.nvidia.com/isaac-sim",
+  },
+  {
+    name: "Python",
+    category: "Language",
+    icon: <SiPython fontSize="30px" className="text-yellow-500" />,
+    url: "https://www.python.org/",
+  },
+  {
+    name: "C++",
+    category: "Language",
+    icon: <SiCplusplus fontSize="30px" className="text-blue-600" />,
+    url: "https://isocpp.org/",
+  },
   {
     name: "Typescript",
     category: "Language",
@@ -265,6 +300,22 @@ const resume = {
 // ];
 
 const companies = [
+  {
+    title: "Imitation Machines",
+    alt: "Imitation Machines logo",
+    url: "https://imitationmachines.com/",
+    role: "Robotics Software Engineer",
+    skills: [
+      "ROS2",
+      "MuJoCo Simulation",
+      "NVIDIA Isaac Sim",
+      "Robot Software Development",
+      "Python",
+      "C++",
+    ],
+    period: "Aug 2025 - Present",
+    logo: "/im.png",
+  },
     {
     title: "Tutoral Hub",
     alt: "Tutoral Hub logo",

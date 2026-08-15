@@ -38,10 +38,37 @@ const ProfileSection = () => {
           </Flex>
         </Flex>
         <Paragraph fontSize="2xl" lineHeight={1.6}>
-          Web/Android Application Developer | Devops engineer from Australia.
+          Robotics Software Engineer at Imitation Machines | Web/Android Application Developer | Devops engineer from Australia.
         </Paragraph>
         <Paragraph fontSize="2xl" lineHeight={1.6}>
-          Excellence in{" "}
+          Building robot software with{" "}
+          <Link
+            color={useColorModeValue("blue.500", "blue.400")}
+            href="https://docs.ros.org/en/rolling/"
+            fontWeight="500"
+            isExternal
+          >
+            ROS2,
+          </Link>
+          {" "}
+          <Link
+            color={useColorModeValue("blue.500", "blue.400")}
+            href="https://mujoco.org/"
+            fontWeight="500"
+            isExternal
+          >
+            MuJoCo
+          </Link>
+          {" & "}
+          <Link
+            color={useColorModeValue("blue.500", "blue.400")}
+            href="https://developer.nvidia.com/isaac-sim"
+            fontWeight="500"
+            isExternal
+          >
+            NVIDIA Isaac Sim
+          </Link>
+          {" "}simulation. Also skilled in{" "}
           <Link
             color={useColorModeValue("blue.500", "blue.400")}
             href="https://nextjs.org/"
