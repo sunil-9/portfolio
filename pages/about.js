@@ -1,144 +1,60 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  SlideFade,
-  Stack,
-  useColorMode,
-  VStack,
-} from "@chakra-ui/react";
+import { useState } from "react";
+import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
-import React from "react";
-import { AiFillStar } from "react-icons/ai";
-import { BsFillBriefcaseFill } from "react-icons/bs";
-import { FaGraduationCap } from "react-icons/fa";
-import CompanyCard from "../components/CompanyCard";
-import Paragraph from "../components/Paragraph";
-import { UnderlinedText } from "../components/UnderlinedText";
+import Link from "next/link";
+import { FaArrowRight, FaBriefcase, FaCode, FaGraduationCap, FaMapMarkerAlt, FaRobot } from "react-icons/fa";
 import { companies, educations } from "../constant";
-import styles from "../styles/Home.module.css";
-import { MotionBox } from "../utils/motion";
+import styles from "../styles/About.module.css";
 
-function About() {
+const descriptions = {
+  "Imitation Machines": "Building robot software with ROS2 and validating behavior in MuJoCo and NVIDIA Isaac Sim. Connecting perception, control, and sim-to-real workflows with Python and C++.",
+  "Tutoral Hub": "Creating a learning resource for BCA students, with course content, study materials, and important questions in one place.",
+  "International School of Management and Technology (ISMT) college": "Teaching machine learning and business process support, while supporting student projects and academic operations.",
+  Oarkflow: "Developing production-ready machine learning systems alongside backend services and React front ends.",
+  "La Grandee International College": "Teaching Android and Linux, developing curriculum, and guiding students through their software projects.",
+  "Ad Break Media/Gaintplay LLC": "Building Node.js backend services and managing cloud deployments, Kubernetes infrastructure, and CI/CD pipelines.",
+  "Race Groups": "Growing from developer to IT Head: delivering PHP and MySQL systems, automating deployments, and overseeing technical operations across four branches.",
+};
+const categories = { career: "Career", education: "Education", project: "Personal project" };
+const startDate = (period) => Date.parse(period.split(" - ")[0].replace("Sept ", "Sep ")) || 0;
+const milestones = [
+  ...companies.map((item) => ({ ...item, category: item.role === "Personal Project" ? "project" : "career" })),
+  ...educations.map((item) => ({ ...item, category: "education" })),
+].sort((a, b) => startDate(b.period) - startDate(a.period));
+
+export default function About() {
   const { colorMode } = useColorMode();
-
+  const [filter, setFilter] = useState("all");
+  const visible = milestones.filter((item) => filter === "all" || item.category === filter);
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>About Me</title>
-
-        <link rel="icon" href="/sunil.jpg" />
-      </Head>
-
-      <main>
-        <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
-          <SlideFade in offsetY={500}>
-            <Box>
-              <UnderlinedText>
-                <Flex alignItems={"center"}>
-                  <Stack pr={3}>
-                    <AiFillStar size={"30px"} />
-                  </Stack>
-                  <Heading>About Me</Heading>
-                </Flex>
-              </UnderlinedText>
-
-              <Paragraph className='text-justify' fontSize="lg" lineHeight={1.6} my={5}>
-                Hi, I&apos;m Sunil Sapkota from Australia. With more than five years of professional experience, I&apos;ve built a versatile skill set across robotics software engineering, web development, Android development, machine learning, and DevOps. My academic journey of a Master&apos;s in Information Technology from Victoria University Sydney, complemented by a strong foundation in software development and management from my Bachelor&apos;s in Computer Applications at La Grandee International College.
-              </Paragraph>
-
-              <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                For over a year now, I&apos;ve been working as a Robotics Software Engineer at Imitation Machines, where I build robot software with ROS2, and develop and validate robot behavior using MuJoCo and NVIDIA Isaac Sim simulation environments. This role sits at the intersection of my software engineering background and a growing focus on simulation-driven robotics, spanning perception, control, and sim-to-real workflows in Python and C++.
-              </Paragraph>
-
-              <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                During college, I began honing my skills in PHP backend and Java-based Android applications. Post-graduation, I deepened my expertise in full-stack development—specializing in Node.js and PHP on the backend and React.js for frontend work. In parallel, I embraced infrastructure and automation with Linux systems, Docker, Kubernetes, Terraform, and AWS, evolving into a well-rounded DevOps practitioner.
-              </Paragraph>
-              <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                My other recent roles reflect this blend of disciplines. I served as Assistant Professor at both La Grandee International College and the International School of Management and Technology (ISMT), where I taught Android, Linux, Machine Learning, supported curriculum design, supervised student projects, and contributed to administrative operations. Concurrently, at Oarkflow, I worked as a Full Stack / Machine Learning Engineer, developing production-ready ML systems alongside backend and React.js front ends.
-              </Paragraph>
-              <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                Earlier in my career, I worked with Gaintplay (Ad Break Media) as a Node.js Backend Developer and DevOps Engineer, handling cloud deployments, Kubernetes on Linode, CI/CD pipelines, and server management. At Race Groups, where I advanced to IT Head, I led development on PHP and MySQL systems, implemented CI/CD processes, managed Docker infrastructure, and oversaw technical operations across four branches.
-              </Paragraph>
-              <Paragraph fontSize="lg" lineHeight={1.6} my={5}>
-                I&apos;m a self-driven and resilient professional who thrives in collaborative and high-pressure environments. I continually pursue new learning opportunities to expand my technical and leadership abilities. My key strengths lie in robotics software engineering (ROS2, MuJoCo, Isaac Sim), web development, Android development, DevOps infrastructure, and supporting cloud-based systems, especially within AWS environments.🔥
-              </Paragraph>
-
-              <Flex alignItems="center" my={10}>
-                <UnderlinedText>
-                  <Flex alignItems={"center"}>
-                    <Stack pr={3}>
-                      <BsFillBriefcaseFill size={"30px"} />
-                    </Stack>
-
-                    <Heading>Career</Heading>
-                  </Flex>
-                </UnderlinedText>
-              </Flex>
-
-              <VStack
-                spacing={4}
-                marginBottom={6}
-                align="left"
-                mx={[0, 0, 6]}
-                mt={5}
-              >
-                {companies.map((company, index) => (
-                  <MotionBox whileHover={{ y: -5 }} key={index}>
-                    <CompanyCard
-                      key={index}
-                      title={company.title}
-                      role={company.role}
-                      skills={company.skills}
-                      period={company.period}
-                      logo={company.logo}
-                      url={company.url}
-                      colorMode={colorMode}
-                    />
-                  </MotionBox>
-                ))}
-              </VStack>
-
-              <Flex alignItems="center" my={10}>
-                <UnderlinedText>
-                  <Flex alignItems="center">
-                    <Stack pr={3}>
-                      <FaGraduationCap size={"30px"} />
-                    </Stack>
-                    <Heading>Education</Heading>
-                  </Flex>
-                </UnderlinedText>
-              </Flex>
-
-              <VStack
-                spacing={4}
-                marginBottom={6}
-                align="left"
-                mx={[0, 0, 6]}
-                mt={5}
-              >
-                {educations.map((education, index) => (
-                  <MotionBox whileHover={{ y: -5 }} key={index}>
-                    <CompanyCard
-                      key={index}
-                      title={education.title}
-                      role={education.role}
-                      skills={education.skills}
-                      period={education.period}
-                      logo={education.logo}
-                      url={education.url}
-                      colorMode={colorMode}
-                    />
-                  </MotionBox>
-                ))}
-              </VStack>
-            </Box>
-          </SlideFade>
-        </Container>
-      </main>
-    </div>
+    <main className={styles.page} data-theme={colorMode}>
+      <Head><title>About Me | Sunil Sapkota</title><meta name="description" content="Explore Sunil Sapkota's journey through software development, DevOps, teaching, and robotics." /></Head>
+      <header className={styles.hero}>
+        <div><p className={styles.eyebrow}>ABOUT ME / MY JOURNEY</p>
+          <h1>A curiosity for software.<br /><span>A journey into robotics.</span></h1>
+          <p className={styles.intro}>I’m Sunil Sapkota, a software engineer based in Australia. From building web applications to teaching the next generation and developing robot software, every chapter has added a new perspective.</p>
+          <p className={styles.location}><FaMapMarkerAlt aria-hidden="true" /> Australia <span>•</span> Software, systems & simulation</p>
+        </div>
+        <aside className={styles.focus} aria-label="Current focus"><div className={styles.focusIcon}><FaRobot aria-hidden="true" /></div><p className={styles.eyebrow}>CURRENT CHAPTER</p><h2>Robotics Software<br />Engineer</h2><p>Imitation Machines</p><div className={styles.focusTags}><span>ROS2</span><span>MuJoCo</span><span>Isaac Sim</span></div></aside>
+      </header>
+      <section className={styles.journey} aria-labelledby="journey-title">
+        <div className={styles.sectionHeader}><div><p className={styles.eyebrow}>THE MILESTONES</p><h2 id="journey-title">Learning. Building. Evolving.</h2><p>A timeline of my work, education, and independent projects.</p></div><div className={styles.legend}><span><i data-category="career" />Career</span><span><i data-category="education" />Education</span><span><i data-category="project" />Project</span></div></div>
+        <div className={styles.filters} role="group" aria-label="Filter timeline">{[['all', 'All milestones'], ['career', 'Career'], ['education', 'Education'], ['project', 'Projects']].map(([value, label]) => <button key={value} type="button" onClick={() => setFilter(value)} aria-pressed={filter === value}>{label}</button>)}</div>
+        <p className={styles.timelineNote} aria-live="polite">{visible.length} milestones · Most recent start date first</p>
+        <ol className={styles.timeline}>{visible.map((item, index) => {
+          const Icon = item.category === "education" ? FaGraduationCap : item.category === "project" ? FaCode : FaBriefcase;
+          return <li key={`${item.title}-${item.period}`} className={styles.milestone} data-category={item.category}>
+            <div className={styles.date}><span>{item.period.split(" - ")[0]}</span><small>{String(index + 1).padStart(2, "0")} / {categories[item.category]}</small></div>
+            <span className={styles.node}><Icon aria-hidden="true" /></span>
+            <article className={styles.card}><div className={styles.cardTop}><span className={styles.category}>{categories[item.category]}</span>{/Present|Current/.test(item.period) && <span className={styles.ongoing}>Ongoing</span>}</div><p className={styles.period}>{item.period}</p><h3>{item.role}</h3>
+              <a className={styles.organization} href={item.url} target="_blank" rel="noopener noreferrer">{item.title}<FaArrowRight aria-hidden="true" /><span className={styles.srOnly}> (opens in a new tab)</span></a>
+              {descriptions[item.title] && <p className={styles.description}>{descriptions[item.title]}</p>}
+              <ul className={styles.tags} aria-label="Skills and highlights">{item.skills.filter((skill) => skill !== "Running").map((skill) => <li key={skill}>{skill}</li>)}</ul>
+            </article>
+          </li>;
+        })}</ol>
+        <div className={styles.nextChapter}><span className={styles.spark}>✦</span><h2>Always a student. Always a builder.</h2><p>Continuing to explore the intersection of software engineering, intelligent systems, and the physical world.</p><Link href="/contact"><a>Let’s build something together <FaArrowRight aria-hidden="true" /></a></Link></div>
+      </section>
+    </main>
   );
 }
-
-export default About;

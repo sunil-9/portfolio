@@ -27,7 +27,7 @@ const ProfileSection = () => {
             fontSize={{ base: "28px", md: "40px", lg: "48px" }}
             mb={3}
           >
-            Hey, I’m Sunil Sapkota. <span className="waving-hand">ðŸ‘‹</span>
+            Hey, I’m Sunil Sapkota. <span className="waving-hand">👋</span>
           </Heading>
           <Flex alignItems={"flex-end"}>
             <Avatar
