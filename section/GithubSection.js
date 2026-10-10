@@ -12,7 +12,7 @@ import GithubCard from "../components/GithubCard";
 import Paragraph from "../components/Paragraph";
 import { MotionBox } from "../utils/motion";
 
-const GithubSection = ({ repos }) => {
+const GithubSection = ({ repos = [] }) => {
   const [openTab, setOpenTab] = React.useState(1);
   const languages = [...new Set(repos.map((repo) => repo.language))].sort();
 //   console.log(languages);
@@ -41,6 +41,7 @@ const GithubSection = ({ repos }) => {
           Feel free to pay a visit and don't forget to leave me a star! ⭐{" "}
         </Text>
       </Paragraph>
+      {!repos.length && <Text role="status">Repositories are temporarily unavailable. Please check back soon.</Text>}
       <div className="w-full">
         <ul
           className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
@@ -55,26 +56,19 @@ const GithubSection = ({ repos }) => {
               className="-mb-px mr-2 last:mr-0 flex-auto text-center hover:scale-110"
               key={index}
             >
-              <a
-                className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  useColorModeValue("gray.600", "gray.400") +
-                  (openTab === index + 1
-                    ? "text-blueGray-600 " +
-                      useColorModeValue("bg-slate-400", "bg-slate-700")
-                    : "bg-blue-900")
-                }
+              <button
+                className="repo-filter"
+                aria-pressed={openTab === index + 1}
                 onClick={(e) => {
                   e.preventDefault();
                   setOpenTab(index + 1);
                 }}
                 data-toggle="tab"
-                href="#link1"
-                role="tablist"
+                type="button"
               >
                 <i className="fas fa-space-shuttle text-base mr-1"></i>{" "}
                 {language !== null ? language : "Others"}
-              </a>
+              </button>
             </li>
              </MotionBox>
           ))}

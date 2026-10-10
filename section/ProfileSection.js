@@ -18,22 +18,23 @@ import { resume } from "../constant";
 
 const ProfileSection = () => {
   return (
-    <SlideFade in offsetY={500}>
-      <Box>
-        <Flex alignItems="center" justifyContent="space-between">
+    <SlideFade in offsetY={24}>
+      <Box className="profile-hero">
+        <Box className="eyebrow">ROBOTICS · SOFTWARE · DEVOPS</Box>
+        <Flex alignItems="center" justifyContent="space-between" gap={4}>
           <Heading
             as="h1"
             fontSize={{ base: "28px", md: "40px", lg: "48px" }}
             mb={3}
           >
-            Hey, I am Sunil Sapkota! <span className="waving-hand">👋</span>
+            Hey, I’m Sunil Sapkota. <span className="waving-hand">ðŸ‘‹</span>
           </Heading>
           <Flex alignItems={"flex-end"}>
             <Avatar
               name="Sunil Sapkota"
               src="/profile_picture.png"
               mb={5}
-              size="lg"
+              size="xl"
             />
           </Flex>
         </Flex>
@@ -84,7 +85,7 @@ const ProfileSection = () => {
             fontWeight="500"
             isExternal
             >
-            Terrafom
+            Terraform
           </Link>
             {" & "}
           <Link

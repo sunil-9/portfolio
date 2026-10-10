@@ -89,6 +89,7 @@ const Contact = () => {
           <SlideFade in offsetY={90}>
             <Flex width="full" align="center" justifyContent="center">
               <Box
+                className="glass-card"
                 p={6}
                 maxWidth="container.lg"
                 borderWidth={1}

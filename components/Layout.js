@@ -9,8 +9,8 @@ function Layout({children}) {
             <NavBar/>
             <Box 
                 as="main"
-                pt={{ base: "12", md: "0" }}  // Add top padding for mobile top bar
-                pb={{ base: "20px", md: "0" }} // Add bottom padding for mobile bottom nav
+                pt={4}
+                pb={{ base: "24px", md: "0" }}
             >
                 {children}
             </Box>

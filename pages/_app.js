@@ -4,6 +4,7 @@ import { NextSeo } from "next-seo";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import "../styles/globals.css";
+import theme from "../styles/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -68,7 +69,7 @@ function MyApp({ Component, pageProps }) {
           content="https://sapkotasunil.com.np/sunil.jpg"
         />
       </Head>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Layout>
           <Component {...pageProps} />
         </Layout>

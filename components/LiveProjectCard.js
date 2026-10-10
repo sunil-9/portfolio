@@ -15,7 +15,7 @@ import { Button } from '@chakra-ui/button';
 
 export const LiveProjectCard = ({ project }) => (
     <MotionBox whileHover={{ y: -5 }}>
-        <Box
+        <Box className="glass-card"
             p={4}
             display={{ md: "flex" }}
             borderWidth={1}

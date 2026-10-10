@@ -3,7 +3,7 @@ import { Heading, SlideFade, Box, Text } from "@chakra-ui/react";
 import MediumCard from '../components/MediumCard';
 import Paragraph from '../components/Paragraph';
 
-const MediumSection = ({articles}) => {
+const MediumSection = ({articles = []}) => {
     return (
         <SlideFade in offsetY={80} delay={0.2}>
             <Heading
@@ -20,6 +20,7 @@ const MediumSection = ({articles}) => {
             <Box
                 my={5}
             >
+                {!articles.length && <Text role="status">Articles are temporarily unavailable. Please check back soon or <a href="https://medium.com/@sunil-9" target="_blank" rel="noopener noreferrer">read on Medium ↗</a>.</Text>}
                 {articles.map((article) => (
                     <MediumCard article={article} key={article.title} />
                 ))}

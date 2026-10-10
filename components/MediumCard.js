@@ -6,7 +6,7 @@ import { FaMedium } from 'react-icons/fa';
 const MediumCard = ({ article }) => {
     return (
         <MotionBox whileHover={{ y: -5 }}>
-            <LinkBox
+            <LinkBox className="glass-card"
                 as="article"
                 w="100%"
                 p={5}
@@ -24,11 +24,13 @@ const MediumCard = ({ article }) => {
                         justifyContent="space-around"
                         direction={{ base: 'column', md: 'row' }}
                     >
-                        <Image
+                        {article.thumbnail && <Image
                             src={article.thumbnail}
                             alt={article.title}
                             width='200px'
-                        />
+                            borderRadius='xl'
+                            objectFit='cover'
+                        />}
 
                         <Flex flexDirection="column" ml={[0, 5, 5]} mt={[5, 5, 0, 0]}>
                             <Heading as="h2" fontSize="md" fontWeight="600" color={"blue.400"}>{article.title}</Heading>

@@ -1,6 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --glass: rgba(255, 255, 255, 0.62);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-shadow: 0 16px 50px rgba(42, 57, 108, 0.08);
+}
+body.chakra-ui-dark {
+  --glass: rgba(22, 32, 55, 0.66);
+  --glass-border: rgba(167, 194, 235, 0.16);
+  --glass-shadow: 0 16px 50px rgba(0, 0, 0, 0.18);
+  background: radial-gradient(ellipse at 5% 10%, rgba(24, 126, 148, .23), transparent 45%), radial-gradient(ellipse at 95% 35%, rgba(106, 69, 180, .23), transparent 45%), #0b1221;
+  background-attachment: fixed;
+}
+body.chakra-ui-light {
+  background: radial-gradient(ellipse at 5% 10%, #cceff0, transparent 50%), radial-gradient(ellipse at 95% 35%, #e6dafa, transparent 50%), #f1f5fb;
+  background-attachment: fixed;
+}
+.glass-card, .profile-hero, .glass-nav, .glass-mobile-nav, main .chakra-container {
+  background: var(--glass) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+main .chakra-container { border-radius: 28px; padding: clamp(22px, 4vw, 48px); }
+.glass-card { border-radius: 18px !important; transition: border-color .2s ease, box-shadow .2s ease; }
+.glass-card:hover { border-color: rgba(56, 189, 248, .55) !important; box-shadow: 0 12px 32px rgba(56, 189, 248, .08); }
+.profile-hero { position: relative; overflow: hidden; border-radius: 22px; padding: clamp(20px, 3vw, 36px); }
+.profile-hero h1 { font-weight: 750; line-height: 1.15; max-width: 650px; }
+.profile-hero p { font-size: clamp(16px, 1.8vw, 20px); }
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .18em; color: #38bdf8; margin-bottom: 22px; }
+.filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.filter-bar button, .repo-filter { padding: 10px 18px; border-radius: 12px; background: var(--glass); border: 1px solid var(--glass-border); font-size: 13px; font-weight: 600; }
+.filter-bar button[aria-pressed="true"], .repo-filter[aria-pressed="true"] { background: rgba(56, 189, 248, .16); border-color: #38bdf8; }
+body.chakra-ui-light .eyebrow { color: #036b89; }
+.glass-nav { position: sticky; top: 12px; z-index: 100; max-width: 1100px; margin: 12px auto 0; border-radius: 20px; }
+.nav-link { padding: 10px 13px; border-radius: 12px; font-size: 13px; font-weight: 600; transition: background .2s; }
+.nav-link:hover, .nav-link.active { background: rgba(56, 189, 248, .12); text-decoration: none !important; }
+.nav-link.active { color: #38bdf8; }
+body.chakra-ui-light .nav-link.active { color: #036b89; }
+.glass-mobile-nav { position: fixed; bottom: max(12px, env(safe-area-inset-bottom)); left: 12px; right: 12px; z-index: 200; border-radius: 20px; padding: 6px; justify-content: space-around; }
+.glass-mobile-nav .nav-link { display: flex; flex-direction: column; align-items: center; gap: 5px; font-size: 10px; padding: 9px 5px; flex: 1; }
+.glass-mobile-nav svg { font-size: 18px; }
+a:focus-visible, button:focus-visible { outline: 2px solid #38bdf8; outline-offset: 4px; }
+footer { margin-bottom: 30px; }
+@media (max-width: 767px) {
+  .glass-nav { top: 8px; margin: 8px 12px 0; }
+  main .chakra-container { border-radius: 22px; }
+  .profile-hero .chakra-avatar { width: 56px; height: 56px; flex-shrink: 0; }
+  footer { padding-bottom: 90px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
 html,
 body {
   padding: 0;

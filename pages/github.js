@@ -29,8 +29,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      repos: repos || null,
+      repos: repos || [],
     },
+    revalidate: 3600,
   };
 }
 

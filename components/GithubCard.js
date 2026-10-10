@@ -18,7 +18,7 @@ import {BiStar, BiGitRepoForked} from 'react-icons/bi';
 const GithubCard = ({ name, description, language, url, stargazers_count, forks_count }) => {
     return (
         <MotionBox whileHover={{ y: -5 }}>
-            <LinkBox
+            <LinkBox className="glass-card"
                 size="xl"
                 py={2}
                 px={[2, 4]}

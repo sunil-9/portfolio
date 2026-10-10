@@ -1,45 +1,47 @@
-import React from 'react';
-import axios from 'axios';
-import moment from 'moment';
+import axios from "axios";
+import moment from "moment";
+import { XMLParser, XMLValidator } from "fast-xml-parser";
 
-const shortenDescription = (description) => {
-    const defaultContinue = " Continue reading on Medium »"
+const text = (value) => String(value?.["#text"] ?? value ?? "");
+const safeUrl = (value) => {
+  try {
+    const url = new URL(text(value));
+    return ["https:", "http:"].includes(url.protocol) ? url.href : "";
+  } catch { return ""; }
+};
 
-    description = description?.replace(/<h3>.*<\/h3>|<figcaption>.*<\/figcaption>|<[^>]*>/gm, "").substring(0, 100)
-    if (description.length <= 100 - defaultContinue.length) {
-        description += defaultContinue
-    }
-    description += "..."
+export const parseMediumFeed = (xml) => {
+  if (XMLValidator.validate(xml) !== true) throw new Error("Invalid RSS XML");
+  const feed = new XMLParser({ ignoreAttributes: false, parseTagValue: false }).parse(xml);
+  if (feed.rss?.channel === undefined) throw new Error("Missing RSS channel");
+  const items = feed.rss.channel.item || [];
+  return (Array.isArray(items) ? items : [items]).map((item) => {
+    const content = text(item["content:encoded"] || item.description);
+    const description = content.replace(/<[^>]*>/g, " ").replace(/&nbsp;/g, " ")
+      .replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+    const categories = item.category || [];
+    const date = moment(text(item.pubDate));
+    return {
+      title: text(item.title),
+      url: safeUrl(item.link || item.guid),
+      thumbnail: safeUrl(content.match(/<img\b[^>]*\bsrc=["']([^"']+)["']/i)?.[1]),
+      date: date.isValid() ? date.format("YYYY - MMM DD") : "",
+      description: description.slice(0, 180) + (description.length > 180 ? "…" : ""),
+      categories: (Array.isArray(categories) ? categories : [categories]).map(text),
+    };
+  }).filter((item) => item.title && item.url);
+};
 
-    return description
-}
-
-const getMediumArticles = async ({ username }) => {
-    try {
-        // console.log({ username })
-        const { data } = await axios.get(
-            `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${username}`
-        )
-
-        let { items } = data || {}
-
-        const article = items.map(({ title, thumbnail, guid, pubDate, description, categories }) => {
-            return {
-                title: title,
-                thumbnail: thumbnail,
-                url: guid,
-                date: moment(pubDate).format("YYYY - MMM DD"),
-                description: shortenDescription(description),
-                categories: categories
-            }
-        })
-
-        return article;
-
-
-    } catch (err) {
-        console.log(err);
-    }
-}
-
-export default getMediumArticles
+const getMediumArticles = async ({ username = "sunil-9" } = {}) => {
+  const handle = (username || "sunil-9").trim().replace(/^@+/, "");
+  try {
+    const { data } = await axios.get(`https://medium.com/feed/@${encodeURIComponent(handle)}`, {
+      responseType: "text", timeout: 10000, maxContentLength: 5 * 1024 * 1024,
+    });
+    return parseMediumFeed(data);
+  } catch {
+    console.warn("Medium feed unavailable; articles will retry during revalidation.");
+    return [];
+  }
+};
+export default getMediumArticles;

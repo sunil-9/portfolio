@@ -14,7 +14,7 @@ import {
 
 const CompanyCard = ({ title, role, skills, period, logo, alt, url, colorMode }) => {
     return (
-        <LinkBox
+        <LinkBox className="glass-card"
             px={4}
             py={5}
             borderWidth="1px"

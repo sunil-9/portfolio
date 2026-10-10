@@ -12,7 +12,7 @@ import { MotionBox } from "../utils/motion";
 const StackCard = ({ stack }) => {
   return (
     <MotionBox whileHover={{ y: -5 }}>
-      <LinkBox
+      <LinkBox className="glass-card"
         as="article"
         w="100%"
         p={4}

@@ -3,7 +3,8 @@ import axios from "axios";
 const getGithubRepos = async ({ username }) => {
   try {
     const res = await axios.get(
-      `https://api.github.com/users/${username}/repos`
+      `https://api.github.com/users/${encodeURIComponent(username || 'sunil-9')}/repos`,
+      { timeout: 10000 }
     );
 
     let repos = res.data;
@@ -17,7 +18,8 @@ const getGithubRepos = async ({ username }) => {
     let result = repos?.sort((a, b) => b.stargazers_count - a.stargazers_count);
     return result;
   } catch (err) {
-    console.log(err);
+    console.warn('GitHub repositories are temporarily unavailable.');
+    return [];
   }
 };
 
